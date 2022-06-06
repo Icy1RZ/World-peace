@@ -1,0 +1,58 @@
+--[[script made by MyWorld#4430]] local ws = game:GetService("Workspace")
+--[[script made by MyWorld#4430]] local lp = game:GetService("Players").LocalPlayer
+--[[script made by MyWorld#4430]] ws.DescendantAdded:Connect(function(des)
+--[[script made by MyWorld#4430]]     if not des:IsA("Tool") then
+--[[script made by MyWorld#4430]]         return
+--[[script made by MyWorld#4430]]     end
+--[[script made by MyWorld#4430]]     if not des.Parent:IsA("Model") then
+--[[script made by MyWorld#4430]]         return
+--[[script made by MyWorld#4430]]     end
+--[[script made by MyWorld#4430]]     local hum = des.Parent:FindFirstChildOfClass("Humanoid")
+--[[script made by MyWorld#4430]]     if not hum then
+--[[script made by MyWorld#4430]]         return
+--[[script made by MyWorld#4430]]     end
+--[[script made by MyWorld#4430]]     if hum.Health == 0 then
+--[[script made by MyWorld#4430]]         return
+--[[script made by MyWorld#4430]]     end
+--[[script made by MyWorld#4430]]     local c = lp.Character
+--[[script made by MyWorld#4430]]     if not (c and c.Parent) then
+--[[script made by MyWorld#4430]]         return
+--[[script made by MyWorld#4430]]     end
+--[[script made by MyWorld#4430]]     if (des.Parent == c) then
+--[[script made by MyWorld#4430]]         return
+--[[script made by MyWorld#4430]]     end
+--[[script made by MyWorld#4430]]     local part = des.Parent:FindFirstChild("HumanoidRootPart")
+--[[script made by MyWorld#4430]]     if not part then
+--[[script made by MyWorld#4430]]         return
+--[[script made by MyWorld#4430]]     end
+--[[script made by MyWorld#4430]]     local sword = c:FindFirstChildOfClass("Tool")
+--[[script made by MyWorld#4430]]     if not sword then
+--[[script made by MyWorld#4430]]         return
+--[[script made by MyWorld#4430]]     end
+--[[script made by MyWorld#4430]]     local hum0 = c:FindFirstChildOfClass("Humanoid")
+--[[script made by MyWorld#4430]]     if not hum0 then
+--[[script made by MyWorld#4430]]         return
+--[[script made by MyWorld#4430]]     end
+--[[script made by MyWorld#4430]]     if hum0.Health == 0 then
+--[[script made by MyWorld#4430]]         return
+--[[script made by MyWorld#4430]]     end
+--[[script made by MyWorld#4430]]     local handle = sword:FindFirstChild("Handle")
+--[[script made by MyWorld#4430]]     if not handle then
+--[[script made by MyWorld#4430]]         return
+--[[script made by MyWorld#4430]]     end
+--[[script made by MyWorld#4430]]     for i, v in pairs(c:GetChildren()) do
+--[[script made by MyWorld#4430]]         pcall(function()
+--[[script made by MyWorld#4430]]             v.CanTouch = false
+--[[script made by MyWorld#4430]]         end)
+--[[script made by MyWorld#4430]]     end
+--[[script made by MyWorld#4430]]     print("a")
+--[[script made by MyWorld#4430]]     while c and c.Parent and hum0 and hum0.Parent and hum and hum.Parent and (hum0.Health ~= 0) and (hum.Health ~= 0) and part and part.Parent and handle and handle.Parent and sword and sword.Parent do
+--[[script made by MyWorld#4430]]         print("reyed")
+--[[script made by MyWorld#4430]]         part.CFrame = handle.CFrame
+--[[script made by MyWorld#4430]]         wait()
+--[[script made by MyWorld#4430]]     end
+--[[script made by MyWorld#4430]] end)
+
+print("Made by MyWorld#4430")
+wait(2)
+print("Also i gave u some extra credits yw ;)")
